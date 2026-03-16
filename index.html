@@ -6,6 +6,32 @@
     <title>Q4 Drill2</title>
 </head>
 <body>
-    
+    <script>
+
+        function teamRank() {
+            var rank = "1st";
+
+            message = "";
+
+            switch(true) {
+                case (rank === "1st"):
+                    message = "Champion!";
+                    break;
+                case (rank === "2nd"):
+                    message = "Second place!";
+                    break;
+                case (rank === "3rd"):
+                    message = "Third place!";
+                    break;
+                case (rank === "4th"):
+                    message = "Fourth place!";
+                    break;
+                default:
+                    message = "Rank could not be determined.";
+
+            }
+            alert(message);
+        }
+    </script>
 </body>
 </html>
