@@ -18,7 +18,6 @@
     </form>
     
     <script>
-        HeatIndex = temperature + (0.33 * humidity) - 4;
         function heatIndexChecker() {
             var temperature = parseFloat(document.getElementById("temperature").value);
             var humidity = parseFloat(document.getElementById("humidity").value);
@@ -33,6 +32,7 @@
             else if (heatIndex >= 37) {
                 alert("Heat Index: " + temperature + "°C, " + humidity + "% - It's a hot day! Take precautions.");
             }
+            
             else {
                 alert("Heat Index: " + temperature + "°C, " + humidity + "% - It's a normal day. Enjoy!");
             }
