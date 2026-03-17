@@ -23,7 +23,7 @@
             var humidity = parseFloat(document.getElementById("humidity").value);
             var heatIndex = temperature + (0.33 * humidity) - 4;
 
-            if (heatIndex >= 27) {
+            if (heatIndex <= 27) {
                 alert("Heat Index: " + temperature + "°C, " + humidity + "% - It cools down a bit. Enjoy the day!");
             }
             else if (heatIndex >= 32) {
