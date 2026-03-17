@@ -10,18 +10,25 @@
     <h1>Heat Index Checker</h1>
 
     <form>
-        <input type="text" id="temperature" placeholder="Input degree value in Celsius">
+        <input type="text" id="temperature" placeholder="input degree value in Celsius">
         <br>
         <input type="text" id="humidity" placeholder="Input humidity value in percentage">
         <br>
         <button type="button" onclick="heatIndexChecker()">Check Heat Index</button>
+
     </form>
     
     <script>
-        function heatIndexChecker() {
+
+         function heatIndexChecker() {
             var temperature = parseFloat(document.getElementById("temperature").value);
             var humidity = parseFloat(document.getElementById("humidity").value);
             var heatIndex = temperature + (0.33 * humidity) - 4;
+            let cat1 = "cool"; 
+            let cat2 = "warm";
+            let cat3 = "hot";
+            let cat4 = "very hot";
+            let cat5 = "extremely hot"; 
 
             if (heatIndex <= 27) {
                 alert("Heat Index: " + temperature + "°C, " + humidity + "% - It cools down a bit. Enjoy the day!");
@@ -35,8 +42,17 @@
             else if (heatIndex >=41) {
                 alert("Heat Index: " + temperature + "°C, " + humidity + "% - Very hot today! careful, you might melt.");
             }
-            else
+        
+
+            else (heatIndex <=42) 
+                alert("Heat Index:" + temperature + "°C, " + humidity + "%- Extreme heat, advised to not go outside.");
+
         }
+
+    
+        
+        
+
 
     </script>
 </body>
