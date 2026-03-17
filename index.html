@@ -5,33 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q4 Drill2</title>
 </head>
+
 <body>
+    <h1>Heat Index Checker</h1>
+
+    <form>
+        <input type="text" id="temperature" placeholder="Input degree value in Celsius">
+        <br>
+        <input type="text" id="humidity" placeholder="Input humidity value in percentage">
+        <br>
+        <button type="button" onclick="heatIndexChecker()">Check Heat Index</button>
+    </form>
+    
     <script>
-
+        HeatIndex = temperature + (0.33 * humidity) - 4;
         function heatIndexChecker() {
-            var rank = "1st";
+            var temperature = parseFloat(document.getElementById("temperature").value);
+            var humidity = parseFloat(document.getElementById("humidity").value);
+            var heatIndex = temperature + (0.33 * humidity) - 4;
 
-            message = "";
-
-            switch(true) {
-                case (rank === "1st"):
-                    message = "Champion!";
-                    break;
-                case (rank === "2nd"):
-                    message = "Second place!";
-                    break;
-                case (rank === "3rd"):
-                    message = "Third place!";
-                    break;
-                case (rank === "4th"):
-                    message = "Fourth place!";
-                    break;
-                default:
-                    message = "Heat could not be checked.";
-
+            if (heatIndex >= 27) {
+                alert("The heat index is " + heatIndex.toFixed(2) + ". It is hot outside.");
+            } else {
+                alert("The heat index is " + heatIndex.toFixed(2) + ". It is not hot outside.");
             }
-            alert(message);
         }
+
     </script>
 </body>
 </html>
