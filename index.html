@@ -26,16 +26,16 @@
             if (heatIndex <= 27) {
                 alert("Heat Index: " + temperature + "°C, " + humidity + "% - It cools down a bit. Enjoy the day!");
             }
-            else if (heatIndex >= 32) {
+            else if (heatIndex >=32) {
                 alert("Heat Index: " + temperature + "°C, " + humidity + "% - Going to be a warm day. Stay cool!");
             }
-            else if (heatIndex >= 37) {
-                alert("Heat Index: " + temperature + "°C, " + humidity + "% - It's a hot day! Take precautions.");
+            else if (heatIndex >=37) {
+               alert("Heat Index: " + temperature + "°C, " + humidity + "% - It's gonna be hot today!");
             }
-            
-            else {
-                alert("Heat Index: " + temperature + "°C, " + humidity + "% - It's a normal day. Enjoy!");
+            else if (heatIndex >=41) {
+                alert("Heat Index: " + temperature + "°C, " + humidity + "% - Very hot today! careful, you might melt.");
             }
+            else
         }
 
     </script>
