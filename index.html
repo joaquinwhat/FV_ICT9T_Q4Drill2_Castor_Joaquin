@@ -17,12 +17,24 @@
         <button type="button" onclick="heatIndexChecker()">Check Heat Index</button>
 
     </form>
+
+    <details ontoggle="message1()">
+        <summary>
+            <u>Instructions</u>
+        </summary>
+        <br>
+        <i id="message"></i>
+     </details>
     
     <script>
 
+        function message1(){
+            document.getElementById("message").innerHTML = "Input Degree and Humidity to find out!";
+        }
+
          function heatIndexChecker() {
-            var temperature = parseFloat(document.getElementById("temperature").value);
-            var humidity = parseFloat(document.getElementById("humidity").value);
+            var temperature = document.getElementById("temperature").value;
+            var humidity = document.getElementById("humidity").value;
             var heatIndex = temperature + (0.33 * humidity) - 4;
             let cat1 = "cool"; 
             let cat2 = "warm";
