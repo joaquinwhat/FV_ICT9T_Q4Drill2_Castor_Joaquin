@@ -25,9 +25,13 @@
             var heatIndex = temperature + (0.33 * humidity) - 4;
 
             if (heatIndex >= 27) {
-                alert("The heat index is " + heatIndex.toFixed(2) + ". It is hot outside.");
-            } else {
-                alert("The heat index is " + heatIndex.toFixed(2) + ". It is not hot outside.");
+                alert("Heat Index: " + temperature + "°C, " + humidity + "% - It's a hot day! Stay hydrated.");
+            }
+            else if (heatIndex >= 32) {
+                alert("Heat Index: " + temperature + "°C, " + humidity + "% - Going to be a warm day. Stay cool!");
+            }
+            else if (heatIndex >= 37) {
+                alert("Heat Index: " + temperature + "°C, " + humidity + "% - It's a hot day! Take precautions.");
             }
         }
 
